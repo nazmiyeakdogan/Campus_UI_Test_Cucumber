@@ -29,8 +29,6 @@ public class LoginElements extends Parent{
             case "password" : return password;
             case "loginButton" : return loginButton;
             case "loginVerify" : return loginVerify;
-
-
         }
 
         return null;
