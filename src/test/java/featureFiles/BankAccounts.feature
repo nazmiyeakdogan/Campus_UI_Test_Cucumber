@@ -15,8 +15,8 @@ Feature: Bank Accounts Functionality under Parameters
       | addButton |
 
     And Enter new account information
-      | nameInput | AAzbC100223 |
-      | ibanInput | 9813355138  |
+      | nameInput | newAccount01 |
+      | ibanInput | 115677890 |
 
     And Click on the button
       | currency   |
@@ -31,8 +31,8 @@ Feature: Bank Accounts Functionality under Parameters
       | addButton |
 
     And Enter new account information
-      | nameInput | AAzbC100223 |
-      | ibanInput | 9813355138  |
+      | nameInput | newAccount01 |
+      | ibanInput | 115677890  |
 
     And Click on the button
       | currency   |
@@ -44,19 +44,21 @@ Feature: Bank Accounts Functionality under Parameters
   Scenario: Admin user should be able to search and edit bank account
 
     When Admin user searches for registered bank account
-      | searchNameInput | AAzbC100223 |
+      | searchNameInput | newAccount01 |
 
     And Click on the button
       | searchButton |
-      | editButton   |
+
+    And Click on the button
+      | editButton |
 
     And Enter new account information
-      | nameInput | BAzbC100223 |
+      | nameInput | newAccount011 |
 
     And Click on the button
       | saveButton |
 
-    Then Success message should be displayed
+    Then Success edit message should be displayed
 
 
 

@@ -67,10 +67,14 @@ public class BankAccountsSteps {
 
         for (String i : list ){
             WebElement element = ce.getWebElement(i);
+            ce.waitUntilClickable(ce.getWebElement("searchButton"));
             ce.clickFunction(element);
         }
     }
 
 
-
+    @Then("Success edit message should be displayed")
+    public void successEditMessageShouldBeDisplayed() {
+        ce.verifyContainsTextFunction(ce.getWebElement("editMessage"), "success");
+    }
 }

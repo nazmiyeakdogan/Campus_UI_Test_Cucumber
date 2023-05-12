@@ -43,8 +43,12 @@ public class ContentElements extends Parent{
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchButton;
 
-    @FindBy(xpath = "//td[contains(text(),'AzbC100223')]//following::div/ms-edit-button")
+//    @FindBy(xpath = "//td[contains(text(),'AzbC100223')]//following::div/ms-edit-button")
+    @FindBy(css = "svg[data-icon='pen-to-square']")
     public WebElement editButton;
+
+    @FindBy(css = "dynamic-view[class='ng-star-inserted']")
+    public WebElement editMessage;
 
     public WebElement getWebElement(String str){
         switch (str)
@@ -60,10 +64,7 @@ public class ContentElements extends Parent{
             case "searchNameInput" : return searchNameInput;
             case "searchButton" : return searchButton;
             case "editButton" : return editButton;
-
-
-
-
+            case "editMessage" : return editMessage;
         }
 
         return null;
